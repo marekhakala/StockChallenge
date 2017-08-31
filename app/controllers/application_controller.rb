@@ -1,8 +1,13 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
+  include ExceptionHandler
+
   before_action :ensure_json
 
   def ensure_json
     render json: { message: "Wrong content-type header" }, status: 406 and return unless request.content_type == "application/json"
   end
 
+  def routing_error error = "Routing error", status = :not_found
+    render json: { error: error }, status: :not_found
+  end
 end

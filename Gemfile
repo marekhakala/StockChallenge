@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "paranoia", "~> 2.2"
+
 gem 'money-rails'
 gem 'annotate'
 gem 'active_model_serializers'
@@ -45,6 +47,7 @@ group :development, :test do
   gem 'pry-nav'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
 end
 
 group :development do
