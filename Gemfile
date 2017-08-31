@@ -37,9 +37,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'money-rails'
 gem 'annotate'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry'
+  gem 'faker'
   gem 'pry-nav'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
